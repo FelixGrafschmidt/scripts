@@ -1,6 +1,6 @@
-import * as https from "https";
 import * as fs from "fs";
-import {IncomingMessage} from "node:http";
+import * as https from "https";
+import { IncomingMessage } from "node:http";
 
 const filesDir = "wabbajack/files/";
 

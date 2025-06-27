@@ -1,5 +1,5 @@
-import * as sqlite3 from "sqlite3";
 import * as fs from "fs-extra";
+import * as sqlite3 from "sqlite3";
 
 const sql = sqlite3.verbose();
 
@@ -7,13 +7,13 @@ const db = new sql.Database("C:\\Users\\Felix\\Documents\\Paradox Interactive\\E
 
 fs.remove("./euiv/playset/root/")
 	.then(() => {
-		db.all(
+		db.all<{ dirPath: string; steamId: string }>(
 			"SELECT dirPath, steamId from mods WHERE id IN (SELECT modId FROM playsets_mods WHERE playsetId IN (SELECT id FROM playsets WHERE isActive = 1));",
 			(_err, result) => {
-				result.forEach((line) => {
-					console.log(line);
+				result.forEach((value) => {
+					console.log(value);
 
-					fs.copy(line.dirPath, `./euiv/playset/root/${line.steamId}`);
+					fs.copy(value.dirPath, `./euiv/playset/root/${value.steamId}`);
 				});
 
 				db.close();

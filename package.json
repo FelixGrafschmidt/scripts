@@ -1,30 +1,37 @@
 {
 	"name": "scripts",
 	"version": "1.0.0",
-	"main": "index.js",
+	"type": "module",
 	"license": "MIT",
 	"dependencies": {
-		"fs-extra": "^10.0.0",
-		"klaw": "^3.0.0",
-		"sqlite3": "^5.0.2",
-		"tslib": "^2.3.1"
+		"@eslint/js": "^9.29.0",
+		"@types/fs-extra": "^11.0.4",
+		"@types/klaw": "^3.0.7",
+		"@types/node": "^24.0.5",
+		"@types/sqlite3": "^5.1.0",
+		"@typescript-eslint/eslint-plugin": "^8.35.0",
+		"@typescript-eslint/parser": "^8.35.0",
+		"@typescript-eslint/utils": "^8.35.0",
+		"dotenv": "^16.6.1",
+		"eslint": "^9.29.0",
+		"eslint-config-prettier": "^10.1.5",
+		"eslint-plugin-prettier": "^5.5.1",
+		"fs-extra": "^11.3.0",
+		"globals": "^16.2.0",
+		"jiti": "^2.4.2",
+		"klaw": "^4.1.0",
+		"prettier": "^3.6.2",
+		"sqlite3": "^5.1.7",
+		"tslib": "^2.8.1",
+		"tsx": "^4.20.3",
+		"typescript": "^5.8.3"
 	},
 	"scripts": {
-		"wabbajack": "ts-node wabbajack/wabbajack.ts",
-		"missions": "ts-node euiv/missions/missions.ts",
-		"playset": "ts-node euiv/playset/playset.ts"
-	},
-	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^4.29.2",
-		"@typescript-eslint/parser": "^4.29.2",
-		"eslint": "^7.32.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-prettier": "^3.4.1",
-		"prettier": "^2.3.2",
-		"@types/fs-extra": "^9.0.12",
-		"@types/klaw": "^3.0.2",
-		"@types/node": "^16.7.1",
-		"@types/sqlite3": "^3.1.7",
-		"typescript": "^4.3.5"
+		"wabbajack": "tsx wabbajack/wabbajack.ts",
+		"hyperops": "tsx hyperops/hyperops.ts",
+		"decoding": "tsx decoding/decoding.ts",
+		"missions": "tsx euiv/missions/missions.ts",
+		"cr-history": "tsx cr-history/cr-history.ts",
+		"playset": "tsx euiv/playset/playset.ts"
 	}
 }
