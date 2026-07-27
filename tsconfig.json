@@ -1,18 +1,18 @@
 {
-	"compilerOptions": {
-		"module": "NodeNext",
-		"target": "es2024",
-		"moduleResolution": "NodeNext",
-		"jsx": "preserve",
-		"strictFunctionTypes": true,
-		"sourceMap": true,
-		"forceConsistentCasingInFileNames": true,
-		"importHelpers": true,
-		"removeComments": true,
-		"esModuleInterop": true,
-		"strict": true,
-		"types": ["node"]
-	},
+  "compilerOptions": {
+    "target": "es2024",
+    "jsx": "preserve",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+    "strict": true,
+    "strictFunctionTypes": true,
+    "importHelpers": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  },
 
-	"exclude": ["node_modules", "**/node_modules/*"]
+  "exclude": ["node_modules", "**/node_modules/*"]
 }
